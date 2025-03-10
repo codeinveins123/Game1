@@ -1,0 +1,46 @@
+# Игнорируем временные файлы Unity
+Library/
+Temp/
+Obj/
+Logs/
+UserSettings/
+MemoryCaptures/
+
+# Игнорируем кеши и настройки сборки
+Builds/
+Build/
+ExportedProject/
+*.apk
+*.unitypackage
+
+# Игнорируем файлы Package Manager
+Packages/packages-lock.json
+
+# Разрешаем manifest.json (он нужен для пакетов)
+!Packages/manifest.json
+
+# Игнорируем настройки IDE (Visual Studio, Rider, VS Code)
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.unityproj
+*.pidb
+*.opendb
+*.VC.db
+*.tmp
+*.bak
+
+# Игнорируем файлы логов и отладочных данных
+*.log
+*.stacktrace
+
+# Игнорируем Lightmap и Reflection Probe кэш
+Assets/**/Lightmap-*.exr
+Assets/**/ReflectionProbe-*.exr
+
+# Игнорируем скрытые файлы ОС
+.DS_Store
+Thumbs.db
