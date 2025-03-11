@@ -37,10 +37,6 @@ Packages/packages-lock.json
 *.log
 *.stacktrace
 
-# Игнорируем Lightmap и Reflection Probe кэш
-Assets/**/Lightmap-*.exr
-Assets/**/ReflectionProbe-*.exr
-
 # Игнорируем скрытые файлы ОС
 .DS_Store
 Thumbs.db
