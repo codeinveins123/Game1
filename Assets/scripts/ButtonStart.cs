@@ -16,7 +16,7 @@ public class ButtonStart : MonoBehaviour
     public IEnumerator fadeOut()
     {
         Debug.Log("FADE STARTED");
-        fade.SetTrigger("FadeOut");
+        //fade.SetTrigger("FadeOut");
         yield return new WaitForSeconds(1);
         Debug.Log("FADE ENDED");
         SceneManager.LoadScene("GameScene");

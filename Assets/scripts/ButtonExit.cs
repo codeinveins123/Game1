@@ -10,12 +10,13 @@ public class ButtonExit : MonoBehaviour
         Debug.Log("CLICKED EXITGAME!");
         
         StartCoroutine(fadeOut());
+
     }
 
     public IEnumerator fadeOut()
     {
         Debug.Log("FADE STARTED");
-        fade.SetTrigger("FadeOut");
+        //fade.SetTrigger("FadeOut");
         yield return new WaitForSeconds(1);
         Debug.Log("FADE ENDED");
         Application.Quit();

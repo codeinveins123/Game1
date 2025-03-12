@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-public class ButtonExit : MonoBehaviour
+public class ButtonMenu : MonoBehaviour
 {
     public Animator fade;
     public void click()
@@ -16,7 +16,7 @@ public class ButtonExit : MonoBehaviour
     public IEnumerator fadeOut()
     {
         Debug.Log("FADE STARTED");
-        fade.SetTrigger("FadeOut");
+        //fade.SetTrigger("FadeOut");
         yield return new WaitForSeconds(1);
         Debug.Log("FADE ENDED");
         SceneManager.LoadScene("MenuScene", LoadSceneMode.Additive);
