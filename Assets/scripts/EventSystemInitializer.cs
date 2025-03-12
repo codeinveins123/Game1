@@ -5,7 +5,6 @@ public class EventSystemInitializer : MonoBehaviour
 {
     void Start()
     {
-        // Проверяем, есть ли EventSystem в сцене
         if (FindObjectOfType<EventSystem>() == null)
         {
             CreateEventSystem();
@@ -18,6 +17,6 @@ public class EventSystemInitializer : MonoBehaviour
         eventSystemGO.AddComponent<EventSystem>();
         eventSystemGO.AddComponent<StandaloneInputModule>();
 
-        Debug.Log("EventSystem добавлен в сцену автоматически!");
+        Debug.Log("EventSystem пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");
     }
 }
