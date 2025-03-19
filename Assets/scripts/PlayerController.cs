@@ -24,22 +24,22 @@ public class PlayerController : MonoBehaviour
        Vector2Int newCellTarget = m_CellPosition;
        bool hasMoved = false;
 
-       if(Keyboard.current.upArrowKey.wasPressedThisFrame)
+       if(Keyboard.current.upArrowKey.wasPressedThisFrame || Keyboard.current.wKey.wasPressedThisFrame)
        {
            newCellTarget.y += 1;
            hasMoved = true;
        }
-       else if(Keyboard.current.downArrowKey.wasPressedThisFrame)
+       else if(Keyboard.current.downArrowKey.wasPressedThisFrame || Keyboard.current.sKey.wasPressedThisFrame)
        {
            newCellTarget.y -= 1;
            hasMoved = true;
        }
-       else if (Keyboard.current.rightArrowKey.wasPressedThisFrame)
+       else if (Keyboard.current.rightArrowKey.wasPressedThisFrame || Keyboard.current.dKey.wasPressedThisFrame)
        {
            newCellTarget.x += 1;
            hasMoved = true;
        }
-       else if (Keyboard.current.leftArrowKey.wasPressedThisFrame)
+       else if (Keyboard.current.leftArrowKey.wasPressedThisFrame || Keyboard.current.aKey.wasPressedThisFrame)
        {
            newCellTarget.x -= 1;
            hasMoved = true;
@@ -47,11 +47,11 @@ public class PlayerController : MonoBehaviour
 
        if(hasMoved)
        {
-           //check if the new position is passable, then move there if it is.
            BoardManager.CellData cellData = m_Board.GetCellData(newCellTarget);
 
            if(cellData != null && cellData.Passable)
            {
+                GameManager.Instance.TurnManager.Tick();
                MoveTo(newCellTarget);
            }
        }

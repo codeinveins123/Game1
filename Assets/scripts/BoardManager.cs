@@ -16,7 +16,7 @@ public class BoardManager : MonoBehaviour
     public Tile[] GroundTiles;
     public Tile[] WallTiles;
     public PlayerController Player;
-    void Start()
+    public void Init()
     {
         Debug.Log("Board Manager Start");
         m_Tilemap = GetComponentInChildren<Tilemap>();
@@ -47,8 +47,6 @@ public class BoardManager : MonoBehaviour
                 m_Tilemap.SetTile(new Vector3Int(x, y, 0), tile);
             }
         }
-        Debug.Log("Board Manager Ended");
-        Player.Spawn(this, new Vector2Int(1, 1));
     }
 
     public Vector3 CellToWorld(Vector2Int cellIndex)
